@@ -141,10 +141,10 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
     };
 
     const getScoreTier = (score: number) => {
-        if (score >= 91) return { label: "Audit Ready", color: "text-green-400", desc: "Excellent Compliance" };
-        if (score >= 71) return { label: "Good Standing", color: "text-blue-400", desc: "Minor Improvements Needed" };
-        if (score >= 41) return { label: "Moderate Risk", color: "text-amber-400", desc: "Gaps Identified" };
-        return { label: "High Risk", color: "text-red-400", desc: "Immediate Action Required" };
+        if (score >= 91) return { label: "Audit Ready", color: "text-green-600", desc: "Excellent Compliance" };
+        if (score >= 71) return { label: "Good Standing", color: "text-blue-600", desc: "Minor Improvements Needed" };
+        if (score >= 41) return { label: "Moderate Risk", color: "text-amber-600", desc: "Gaps Identified" };
+        return { label: "High Risk", color: "text-red-600", desc: "Immediate Action Required" };
     };
 
     const handlePrevious = () => {
@@ -173,7 +173,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                     onClick={onClose}
                 >
                     {/* Backdrop */}
-                    <div className="absolute inset-0 bg-[rgba(11,14,20,0.8)] backdrop-blur-xl" />
+                    <div className="absolute inset-0 bg-white/80 backdrop-blur-xl" />
 
                     {/* Modal Card */}
                     <motion.div
@@ -182,10 +182,10 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative w-full max-w-2xl bg-gradient-to-b from-white/[0.02] to-white/[0.01] backdrop-blur-xl border border-primary/30 rounded-3xl shadow-2xl overflow-hidden"
+                        className="relative w-full max-w-2xl bg-white border border-foreground/10 rounded-3xl shadow-2xl overflow-hidden"
                     >
                         {/* Progress Bar */}
-                        <div className="h-1 bg-white/5">
+                        <div className="h-1 bg-foreground/5">
                             <motion.div
                                 className="h-full bg-gradient-to-r from-primary to-blue-500"
                                 initial={{ width: 0 }}
@@ -197,9 +197,9 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                         {/* Close Button */}
                         <button
                             onClick={onClose}
-                            className="absolute top-6 right-6 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors z-10"
+                            className="absolute top-6 right-6 p-2 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-colors z-10"
                         >
-                            <X className="w-5 h-5 text-white/60" />
+                            <X className="w-5 h-5 text-foreground/60" />
                         </button>
 
                         {/* Content */}
@@ -219,10 +219,10 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                                 <p className="text-sm text-primary font-mono mb-2">
                                                     STEP {currentStep + 1} OF {questions.length}
                                                 </p>
-                                                <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+                                                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
                                                     {questions[currentStep].category}
                                                 </h3>
-                                                <p className="text-lg text-white/70">
+                                                <p className="text-lg text-foreground/70">
                                                     {questions[currentStep].question}
                                                 </p>
                                             </div>
@@ -239,11 +239,11 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                               w-full p-5 rounded-xl text-left transition-all
                               border ${answers.find(a => a.questionId === questions[currentStep].id)?.value === option.value
                                                                 ? 'border-primary bg-primary/10'
-                                                                : 'border-white/10 bg-white/5 hover:border-primary/50 hover:bg-white/10'
+                                                                : 'border-foreground/10 bg-foreground/5 hover:border-primary/50 hover:bg-foreground/10'
                                                             }
                             `}
                                                     >
-                                                        <span className="text-white font-medium">{option.label}</span>
+                                                        <span className="text-foreground font-medium">{option.label}</span>
                                                     </motion.button>
                                                 ))}
                                             </div>
@@ -252,7 +252,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                             {currentStep > 0 && (
                                                 <button
                                                     onClick={handlePrevious}
-                                                    className="mt-6 flex items-center gap-2 text-white/50 hover:text-white transition-colors"
+                                                    className="mt-6 flex items-center gap-2 text-foreground/50 hover:text-foreground transition-colors"
                                                 >
                                                     <ChevronLeft className="w-4 h-4" />
                                                     Previous
@@ -270,10 +270,10 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-4">
                                                     <Mail className="w-8 h-8 text-primary" />
                                                 </div>
-                                                <h3 className="text-3xl font-display font-bold text-white mb-3">
+                                                <h3 className="text-3xl font-display font-bold text-foreground mb-3">
                                                     Get Your Results
                                                 </h3>
-                                                <p className="text-white/60">
+                                                <p className="text-foreground/60">
                                                     Enter your work email to receive your personalized Gap Analysis report
                                                 </p>
                                             </div>
@@ -285,11 +285,11 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                                     value={userEmail}
                                                     onChange={(e) => setUserEmail(e.target.value)}
                                                     placeholder="your.email@company.com"
-                                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white placeholder:text-white/30"
+                                                    className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-xl focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-foreground/30"
                                                 />
                                                 <button
                                                     type="submit"
-                                                    className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] active:scale-95 flex items-center justify-center gap-2"
+                                                    className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-xl active:scale-95 flex items-center justify-center gap-2"
                                                 >
                                                     View My Results
                                                     <ChevronRight className="w-5 h-5" />
@@ -298,7 +298,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
 
                                             <button
                                                 onClick={handlePrevious}
-                                                className="mt-6 flex items-center gap-2 text-white/50 hover:text-white transition-colors mx-auto"
+                                                className="mt-6 flex items-center gap-2 text-foreground/50 hover:text-foreground transition-colors mx-auto"
                                             >
                                                 <ChevronLeft className="w-4 h-4" />
                                                 Previous
@@ -314,7 +314,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                     transition={{ duration: 0.4 }}
                                     className="text-center"
                                 >
-                                    <h3 className="text-2xl font-display font-bold text-white mb-6">
+                                    <h3 className="text-2xl font-display font-bold text-foreground mb-6">
                                         Your TISAX Readiness Score
                                     </h3>
 
@@ -325,20 +325,20 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
                                         <div className={`text-xl font-semibold ${getScoreTier(calculateScore()).color} mb-1`}>
                                             {getScoreTier(calculateScore()).label}
                                         </div>
-                                        <p className="text-white/50">
+                                        <p className="text-foreground/50">
                                             {getScoreTier(calculateScore()).desc}
                                         </p>
                                     </div>
 
                                     {/* Breakdown */}
-                                    <div className="bg-white/5 rounded-2xl p-6 mb-8 text-left">
+                                    <div className="bg-foreground/5 rounded-2xl p-6 mb-8 text-left">
                                         <h4 className="text-sm font-mono text-primary mb-4">BREAKDOWN</h4>
                                         <div className="space-y-3">
                                             {answers.map((answer) => (
                                                 <div key={answer.questionId} className="flex justify-between items-center">
-                                                    <span className="text-white/70 text-sm">{answer.category}</span>
-                                                    <span className={`font-semibold ${answer.value === 10 ? 'text-green-400' :
-                                                        answer.value === 5 ? 'text-amber-400' : 'text-red-400'
+                                                    <span className="text-foreground/70 text-sm">{answer.category}</span>
+                                                    <span className={`font-semibold ${answer.value === 10 ? 'text-green-600' :
+                                                        answer.value === 5 ? 'text-amber-600' : 'text-red-600'
                                                         }`}>
                                                         {answer.label}
                                                     </span>
@@ -349,7 +349,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
 
                                     {/* CTAs */}
                                     <div className="space-y-3">
-                                        <button className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] flex items-center justify-center gap-2">
+                                        <button className="w-full px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all hover:scale-[1.02] hover:shadow-xl flex items-center justify-center gap-2">
                                             <Calendar className="w-5 h-5" />
                                             Book TISAX Consultation
                                         </button>
@@ -361,7 +361,7 @@ export default function ReadinessCalculator({ isOpen, onClose }: ReadinessCalcul
 
                                     <button
                                         onClick={handleReset}
-                                        className="mt-6 text-white/50 hover:text-white transition-colors text-sm"
+                                        className="mt-6 text-foreground/50 hover:text-foreground transition-colors text-sm"
                                     >
                                         Start New Assessment
                                     </button>

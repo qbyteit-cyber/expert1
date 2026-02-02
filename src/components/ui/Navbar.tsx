@@ -49,7 +49,7 @@ export default function Navbar() {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    className="text-white/70 hover:text-primary transition-colors text-sm font-medium"
+                                    className="text-foreground/70 hover:text-primary transition-colors text-sm font-medium"
                                 >
                                     {link.label}
                                 </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="md:hidden p-2 hover:bg-white/5 rounded-lg transition-colors"
+                            className="md:hidden p-2 hover:bg-foreground/5 rounded-lg transition-colors"
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? (
@@ -85,14 +85,14 @@ export default function Navbar() {
                         transition={{ duration: 0.2 }}
                         className="fixed top-20 left-4 right-4 z-40 md:hidden"
                     >
-                        <div className="glass-card rounded-2xl p-6 border border-white/10">
+                        <div className="glass-card rounded-2xl p-6 border border-foreground/10">
                             <div className="flex flex-col gap-4">
                                 {navLinks.map((link) => (
                                     <a
                                         key={link.href}
                                         href={link.href}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="text-white/70 hover:text-primary transition-colors text-lg font-medium py-2"
+                                        className="text-foreground/70 hover:text-primary transition-colors text-lg font-medium py-2"
                                     >
                                         {link.label}
                                     </a>

@@ -58,7 +58,7 @@ export default function ServicesSection() {
                     Compliance <span className="text-primary">Ecosystem</span>
                 </motion.h2>
                 <motion.p
-                    className="text-white/60 max-w-2xl mx-auto text-lg"
+                    className="text-foreground/60 max-w-2xl mx-auto text-lg"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -81,12 +81,11 @@ export default function ServicesSection() {
                         onMouseLeave={() => setHoveredCard(null)}
                         className={`
                             group relative p-8 rounded-2xl 
-                            bg-gradient-to-b from-white/[0.02] to-white/[0.01]
-                            backdrop-blur-xl
+                            bg-white
                             border transition-all duration-300
                             ${hoveredCard === service.id
-                                ? 'border-primary/40 shadow-[0_0_30px_rgba(0,242,255,0.15)]'
-                                : 'border-white/5'
+                                ? 'border-primary/40 shadow-xl'
+                                : 'border-foreground/5'
                             }
                             hover:scale-[1.02]
                         `}
@@ -107,12 +106,12 @@ export default function ServicesSection() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-xl font-display font-semibold text-white mb-3">
+                        <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                             {service.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-white/50 text-sm leading-relaxed mb-4">
+                        <p className="text-foreground/50 text-sm leading-relaxed mb-4">
                             {service.description}
                         </p>
 
@@ -126,9 +125,9 @@ export default function ServicesSection() {
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                         >
-                            <div className="pt-4 border-t border-white/5">
+                            <div className="pt-4 border-t border-foreground/5">
                                 <p className="text-xs text-primary/70 font-medium mb-2">SCOPE OF WORK</p>
-                                <p className="text-xs text-white/40 leading-relaxed">
+                                <p className="text-xs text-foreground/40 leading-relaxed">
                                     {service.scope}
                                 </p>
                             </div>

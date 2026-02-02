@@ -50,7 +50,7 @@ export default function ContactForm() {
             {/* Name & Email Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground/70 mb-2">
                         Full Name *
                     </label>
                     <input
@@ -58,12 +58,12 @@ export default function ContactForm() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white placeholder:text-white/30"
+                        className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-foreground/30"
                         placeholder="John Doe"
                     />
                 </div>
                 <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground/70 mb-2">
                         Email Address *
                     </label>
                     <input
@@ -71,7 +71,7 @@ export default function ContactForm() {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white placeholder:text-white/30"
+                        className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-foreground/30"
                         placeholder="john@company.com"
                     />
                 </div>
@@ -80,40 +80,40 @@ export default function ContactForm() {
             {/* Company & Service Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-foreground/70 mb-2">
                         Company Name
                     </label>
                     <input
                         type="text"
                         id="company"
                         name="company"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white placeholder:text-white/30"
+                        className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-foreground/30"
                         placeholder="Your Company"
                     />
                 </div>
                 <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-white/70 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-foreground/70 mb-2">
                         Service Interest
                     </label>
                     <select
                         id="service"
                         name="service"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white"
+                        className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground"
                     >
-                        <option value="" className="bg-background">Select a service</option>
-                        <option value="TISAX" className="bg-background">TISAX® Assessment</option>
-                        <option value="TPISR" className="bg-background">TPISR Audit</option>
-                        <option value="ISO27001" className="bg-background">ISO 27001:2022</option>
-                        <option value="GDPR" className="bg-background">GDPR Compliance</option>
-                        <option value="ISMS" className="bg-background">ISMS Implementation</option>
-                        <option value="Other" className="bg-background">Other</option>
+                        <option value="" className="bg-white text-foreground">Select a service</option>
+                        <option value="TISAX" className="bg-white text-foreground">TISAX® Assessment</option>
+                        <option value="TPISR" className="bg-white text-foreground">TPISR Audit</option>
+                        <option value="ISO27001" className="bg-white text-foreground">ISO 27001:2022</option>
+                        <option value="GDPR" className="bg-white text-foreground">GDPR Compliance</option>
+                        <option value="ISMS" className="bg-white text-foreground">ISMS Implementation</option>
+                        <option value="Other" className="bg-white text-foreground">Other</option>
                     </select>
                 </div>
             </div>
 
             {/* Message */}
             <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-foreground/70 mb-2">
                     Message *
                 </label>
                 <textarea
@@ -121,7 +121,7 @@ export default function ContactForm() {
                     name="message"
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-white placeholder:text-white/30 resize-none"
+                    className="w-full px-4 py-3 bg-foreground/5 border border-foreground/10 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-foreground/30 resize-none"
                     placeholder="Tell us about your compliance needs..."
                 />
             </div>
@@ -152,7 +152,7 @@ export default function ContactForm() {
             {/* Submit Button */}
             <div className="space-y-3">
                 {/* Security Badge */}
-                <div className="flex items-center justify-center gap-2 text-sm text-white/40">
+                <div className="flex items-center justify-center gap-2 text-sm text-foreground/40">
                     <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>

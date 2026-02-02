@@ -43,15 +43,15 @@ export default function AboutSection() {
                         </span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
                         Your Trusted Partner in Automotive Security Compliance
                     </h2>
 
-                    <p className="text-lg text-white/70 leading-relaxed mb-6">
+                    <p className="text-lg text-foreground/70 leading-relaxed mb-6">
                         ITIS Secure is a specialized security audit firm dedicated to helping automotive suppliers and manufacturers achieve and maintain compliance with TISAX®, ISO 27001, and GDPR standards.
                     </p>
 
-                    <p className="text-white/60 leading-relaxed mb-8">
+                    <p className="text-foreground/60 leading-relaxed mb-8">
                         Founded by former automotive security engineers and compliance officers, we understand the unique challenges of protecting sensitive data in the automotive supply chain. Our mission is to make world-class security audits accessible, efficient, and results-oriented.
                     </p>
 
@@ -59,15 +59,15 @@ export default function AboutSection() {
                     <div className="grid grid-cols-3 gap-6">
                         <div>
                             <div className="text-3xl font-display font-bold text-primary mb-1">10+</div>
-                            <div className="text-sm text-white/50">Years Experience</div>
+                            <div className="text-sm text-foreground/50">Years Experience</div>
                         </div>
                         <div>
                             <div className="text-3xl font-display font-bold text-primary mb-1">100+</div>
-                            <div className="text-sm text-white/50">Clients Served</div>
+                            <div className="text-sm text-foreground/50">Clients Served</div>
                         </div>
                         <div>
                             <div className="text-3xl font-display font-bold text-primary mb-1">98%</div>
-                            <div className="text-sm text-white/50">Success Rate</div>
+                            <div className="text-sm text-foreground/50">Success Rate</div>
                         </div>
                     </div>
                 </motion.div>
@@ -92,10 +92,10 @@ export default function AboutSection() {
                             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
                                 <feature.icon className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="text-lg font-display font-semibold text-white mb-2">
+                            <h3 className="text-lg font-display font-semibold text-foreground mb-2">
                                 {feature.title}
                             </h3>
-                            <p className="text-sm text-white/60 leading-relaxed">
+                            <p className="text-sm text-foreground/60 leading-relaxed">
                                 {feature.description}
                             </p>
                         </motion.div>

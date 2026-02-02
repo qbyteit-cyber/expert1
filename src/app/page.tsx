@@ -41,18 +41,18 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           Secure Your <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-secondary animate-gradient-x">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/50 to-secondary animate-gradient-x">
             Digital Future
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto font-light px-4"
+          className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto font-light px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Expert audits for <strong className="text-white font-semibold">TISAX®</strong>, <strong className="text-white font-semibold">ISMS</strong>, <strong className="text-white font-semibold">ISO 27001</strong>, <strong className="text-white font-semibold">GDPR</strong>, and <strong className="text-white font-semibold">TPISR</strong>.
+          Expert audits for <strong className="text-foreground font-semibold">TISAX®</strong>, <strong className="text-foreground font-semibold">ISMS</strong>, <strong className="text-foreground font-semibold">ISO 27001</strong>, <strong className="text-foreground font-semibold">GDPR</strong>, and <strong className="text-foreground font-semibold">TPISR</strong>.
           The modern standard for automotive data protection.
         </motion.p>
 

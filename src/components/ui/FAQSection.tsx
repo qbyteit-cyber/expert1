@@ -63,10 +63,10 @@ export default function FAQSection() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
             >
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
                     Frequently Asked Questions
                 </h2>
-                <p className="text-lg text-white/60">
+                <p className="text-lg text-foreground/60">
                     Everything you need to know about TISAX certification
                 </p>
             </motion.div>
@@ -85,7 +85,7 @@ export default function FAQSection() {
                             onClick={() => toggleFAQ(index)}
                             className="w-full px-6 py-5 flex items-center justify-between text-left group"
                         >
-                            <span className="text-lg font-semibold text-white pr-8 group-hover:text-primary transition-colors">
+                            <span className="text-lg font-semibold text-foreground pr-8 group-hover:text-primary transition-colors">
                                 {faq.question}
                             </span>
                             <div className="shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -106,7 +106,7 @@ export default function FAQSection() {
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
                                     className="overflow-hidden"
                                 >
-                                    <div className="px-6 pb-5 text-white/70 leading-relaxed border-t border-white/5 pt-4">
+                                    <div className="px-6 pb-5 text-foreground/70 leading-relaxed border-t border-foreground/5 pt-4">
                                         {faq.answer}
                                     </div>
                                 </motion.div>
@@ -124,10 +124,10 @@ export default function FAQSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-12 text-center"
             >
-                <p className="text-white/60 mb-4">Still have questions?</p>
+                <p className="text-foreground/60 mb-4">Still have questions?</p>
                 <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] transition-all"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 hover:shadow-xl transition-all"
                 >
                     Contact Our Experts
                 </a>

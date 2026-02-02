@@ -1,28 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Core Colors - Fortress/Precision Aesthetic */
-  --background: #0B0E14;
-  /* Deep Space - Inky black with blue hint */
-  --foreground: #E6EDF3;
-  /* Ghost White - Easy on eyes */
+  /* Core Colors - Light Precision Aesthetic */
+  --background: #FFFFFF;
+  --foreground: #0F172A;
+  /* Slate 900 */
 
   /* Brand Colors - High Trust */
   --color-primary: #0861F2;
-  /* Trust Blue - Professional */
   --color-secondary: #C9A063;
-  /* Audit Gold - Gold Standard accent */
   --color-accent: #0861F2;
-  /* Unified with primary */
 
-  /* Surfacing - Architectural depth */
-  --color-surface: #161B22;
-  /* Glass layer */
-  --color-surface-hover: #1C2128;
+  /* Surfacing - Structured depth */
+  --color-surface: #F8FAFC;
+  /* Slate 50 */
+  --color-surface-hover: #F1F5F9;
+  /* Slate 100 */
 
   /* Text hierarchy */
-  --color-muted: #8B949E;
-  /* Muted Slate - Subtext */
+  --color-muted: #64748B;
+  /* Slate 500 */
 }
 
 @theme inline {
@@ -44,22 +41,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
-  /* Prevent horizontal scroll from full-width animations */
 }
 
-/* Utilities - Enterprise Glassmorphism */
+/* Utilities - Light Mode Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
 .glass-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 ::selection {
@@ -124,14 +119,14 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.4);
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  color: rgba(15, 23, 42, 0.4);
   transition: all 0.3s ease;
 }
 
 .marquee-item:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-surface-hover);
   border-color: var(--color-primary);
   color: var(--color-primary);
   transform: scale(1.05);

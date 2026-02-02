@@ -80,7 +80,7 @@ export default function SecurityMesh() {
                 gl={{ antialias: true, alpha: true }}
                 dpr={[1, 2]} // Handle high-DPI screens
             >
-                <fog attach="fog" args={['#020204', 5, 20]} />
+                <fog attach="fog" args={['#FFFFFF', 5, 20]} />
                 <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                     <ParticleNetwork />
                     <CyberShield />

@@ -37,10 +37,10 @@ export default function Testimonials() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
             >
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
                     What People Say
                 </h2>
-                <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
                     Trusted by leading automotive suppliers and Tier-1 manufacturers across Europe
                 </p>
             </motion.div>
@@ -71,16 +71,16 @@ export default function Testimonials() {
                         </div>
 
                         {/* Content */}
-                        <p className="text-white/70 text-sm leading-relaxed mb-6 relative z-10">
+                        <p className="text-foreground/70 text-sm leading-relaxed mb-6 relative z-10">
                             "{testimonial.content}"
                         </p>
 
                         {/* Author */}
-                        <div className="border-t border-white/5 pt-4">
-                            <div className="font-semibold text-white text-sm">
+                        <div className="border-t border-foreground/5 pt-4">
+                            <div className="font-semibold text-foreground text-sm">
                                 {testimonial.name}
                             </div>
-                            <div className="text-xs text-white/50 mt-1">
+                            <div className="text-xs text-foreground/50 mt-1">
                                 {testimonial.role}
                             </div>
                             <div className="text-xs text-primary font-medium mt-1">
@@ -99,10 +99,10 @@ export default function Testimonials() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-12 text-center"
             >
-                <div className="inline-flex items-center gap-2 px-6 py-3 glass-card rounded-full">
+                <div className="inline-flex items-center gap-2 px-6 py-3 glass-card rounded-full border border-foreground/5">
                     <Star className="w-5 h-5 fill-secondary text-secondary" />
-                    <span className="text-sm text-white/70">
-                        <strong className="text-white font-semibold">4.9/5</strong> average rating from 50+ clients
+                    <span className="text-sm text-foreground/70">
+                        <strong className="text-foreground font-semibold">4.9/5</strong> average rating from 50+ clients
                     </span>
                 </div>
             </motion.div>

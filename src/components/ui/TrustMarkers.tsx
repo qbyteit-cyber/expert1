@@ -43,10 +43,10 @@ export default function TrustMarkers() {
                         <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
                             <stat.icon className="w-6 h-6 text-primary" />
                         </div>
-                        <div className="text-3xl md:text-4xl font-display font-bold text-white mb-1">
+                        <div className="text-3xl md:text-4xl font-display font-bold text-foreground mb-1">
                             {stat.value}
                         </div>
-                        <div className="text-sm text-white/50 font-medium">
+                        <div className="text-sm text-foreground/50 font-medium">
                             {stat.label}
                         </div>
                     </motion.div>
@@ -63,17 +63,17 @@ export default function TrustMarkers() {
             >
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="text-center md:text-left">
-                        <h3 className="text-lg font-display font-semibold text-white mb-2">
+                        <h3 className="text-lg font-display font-semibold text-foreground mb-2">
                             Recognized & Certified
                         </h3>
-                        <p className="text-sm text-white/50">
+                        <p className="text-sm text-foreground/50">
                             Accredited by leading automotive and security standards bodies
                         </p>
                     </div>
 
                     <div className="flex items-center gap-8 flex-wrap justify-center">
                         {/* VDA ISA (TISAX) */}
-                        <div className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                        <div className="flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
                             <div className="w-48 h-48 rounded-lg flex items-center justify-center">
                                 <img
                                     src="/tisax-badge-alt.png"
@@ -84,7 +84,7 @@ export default function TrustMarkers() {
                         </div>
 
                         {/* ISO/IEC 27001 */}
-                        <div className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                        <div className="flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
                             <div className="w-40 h-40 rounded-lg flex items-center justify-center">
                                 <img
                                     src="/iso-27001-badge.png"
@@ -92,11 +92,11 @@ export default function TrustMarkers() {
                                     className="w-full h-full object-contain"
                                 />
                             </div>
-                            <span className="text-xs text-white/40">27001:2022</span>
+                            <span className="text-xs text-foreground/40">27001:2022</span>
                         </div>
 
                         {/* GDPR */}
-                        <div className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+                        <div className="flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
                             <div className="w-48 h-48 rounded-lg flex items-center justify-center">
                                 <img
                                     src="/gdpr-certified-badge.png"
