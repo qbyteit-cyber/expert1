@@ -12,6 +12,7 @@ import Testimonials from "@/components/ui/Testimonials";
 import AboutSection from "@/components/ui/AboutSection";
 import FAQSection from "@/components/ui/FAQSection";
 import FeaturedProjects from "@/components/ui/FeaturedProjects";
+import LogoMarquee from "@/components/ui/LogoMarquee";
 
 const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
   ssr: false,
@@ -86,6 +87,7 @@ export default function Home() {
 
       {/* Content Sections */}
       <div className="relative z-10 w-full pb-16 sm:pb-32">
+        <LogoMarquee />
         <div id="services">
           <ServicesSection />
         </div>

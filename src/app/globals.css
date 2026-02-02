@@ -92,3 +92,70 @@ body {
 .animate-gradient-x {
   animation: gradient-x 8s ease infinite;
 }
+
+/* Marquee Styles */
+.marquee {
+  max-width: 100vw;
+  overflow: hidden;
+  --speed: 30s;
+  --numItems: 9;
+  --item-width: 120px;
+  --item-gap: 32px;
+  --single-slide-speed: calc(var(--speed) / var(--numItems));
+  --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
+  --track-width: calc(var(--item-width-plus-gap) * var(--numItems));
+  padding: 20px 0;
+}
+
+.marquee-track {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: var(--track-width) [track] 0px [resting];
+  width: max-content;
+}
+
+.marquee-item {
+  grid-area: resting;
+  animation: marquee-move var(--speed) linear infinite var(--direction, forwards);
+  animation-delay: calc(var(--single-slide-speed) * var(--item-position) * -1);
+  width: var(--item-width);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.marquee-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.marquee-item svg {
+  height: auto;
+  width: 50%;
+}
+
+@keyframes marquee-move {
+  to {
+    transform: translateX(calc(-100cqw - 100%));
+  }
+}
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
+}
+
+.marquee-wrapper>div {
+  margin: 12px 0;
+}
