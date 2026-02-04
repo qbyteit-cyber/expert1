@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DecryptText } from "./DecryptText";
+import { TechnicalReveal } from "./TechnicalReveal";
 import { CompliancePulse } from "./CompliancePulse";
 import { SuccessMatrix } from "./SuccessMatrix";
 import { TisaxPipeline } from "./TisaxPipeline";
@@ -31,7 +31,7 @@ export default function MissionCriticalLanding() {
             {/* Hero Section */}
             <section className="relative pt-60 pb-32 px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="max-w-4xl">
+                    <div className="max-w-6xl">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -43,18 +43,19 @@ export default function MissionCriticalLanding() {
                             </span>
                         </motion.div>
 
-                        <h1 className="text-6xl md:text-8xl font-display font-black text-foreground mb-8 tracking-tighter leading-[0.9]">
-                            <DecryptText text="Securing The Future" delay={500} /><br />
-                            <DecryptText text="Of Automotive Industry" delay={1500} className="text-primary" />
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-foreground mb-8 tracking-tighter leading-[0.9]">
+                            <TechnicalReveal text="Securing The Future Of" delay={500} /><br />
+                            <TechnicalReveal text="Automotive, Cyber and" delay={1200} className="text-primary" /><br />
+                            <TechnicalReveal text="Aerospace Industry" delay={1900} />
                         </h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 2 }}
+                            transition={{ delay: 2.2 }}
                             className="text-xl text-foreground/60 max-w-2xl mb-12 font-mono leading-relaxed"
                         >
-                            Direct technical authority for TISAX® and ISO 27001 assessments. We don't speak marketing. We build audit-proof automotive ecosystems.
+                            Direct technical authority for TISAX®, Cyber, and Aerospace security assessments. We don't speak marketing. We build audit-proof high-integrity ecosystems.
                         </motion.p>
 
                         <motion.div
@@ -81,7 +82,7 @@ export default function MissionCriticalLanding() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
                         <TechnicalCounter value={100} suffix="%" label="Compliance Accuracy" />
                         <TechnicalCounter value={5000} suffix="+" label="Audit Defense Hours" />
-                        <TechnicalCounter value={12} suffix="+" label="Global OEM Portfolios" />
+                        <TechnicalCounter value={3} suffix="" label="Core Industries Secured" />
                         <TechnicalCounter value={98} suffix="%" label="First-Time Pass Rate" />
                     </div>
                 </div>
