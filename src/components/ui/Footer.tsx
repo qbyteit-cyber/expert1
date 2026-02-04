@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -170,9 +171,9 @@ export default function Footer() {
                         © {currentYear} ITIS Secure. All rights reserved.
                     </p>
                     <div className="flex gap-6">
-                        <a href="#" className="text-foreground/40 hover:text-primary transition-colors text-sm">
+                        <Link href="/privacy" className="text-foreground/40 hover:text-primary transition-colors text-sm">
                             Privacy Policy
-                        </a>
+                        </Link>
                         <a href="#" className="text-foreground/40 hover:text-primary transition-colors text-sm">
                             Terms of Service
                         </a>
