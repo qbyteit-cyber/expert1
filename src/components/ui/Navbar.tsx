@@ -59,6 +59,7 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
 
     const navLinks = [
         { href: "/#services", label: "Services", hasMegamenu: true },
+        { href: "/market-segments", label: "Segments" },
         { href: "/about", label: "About" },
         { href: "/#contact", label: "Contact" },
     ];
