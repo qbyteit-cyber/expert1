@@ -49,8 +49,8 @@ export default function ServicesPipeline() {
                 </div>
 
                 <div className="relative py-20 overflow-visible">
-                    {/* Main Pipe Line (Horizontal) */}
-                    <div className="absolute top-1/2 left-0 w-full h-1 bg-foreground/10 -translate-y-1/2 hidden md:block" />
+                    {/* Main Pipe Line (Horizontal) - Positioned under titles */}
+                    <div className="absolute top-[300px] left-0 w-full h-[1px] bg-foreground/10 hidden md:block" />
 
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
                         {services.map((service, i) => (
@@ -63,14 +63,14 @@ export default function ServicesPipeline() {
                                 className="group relative"
                             >
                                 {/* Category Indicator */}
-                                <div className="mb-6">
+                                <div className="mb-6 h-5">
                                     <span className="text-[10px] font-mono font-bold text-primary/50 uppercase tracking-[0.3em] group-hover:text-primary transition-colors">
                                         {service.category}
                                     </span>
                                 </div>
 
                                 {/* Visual Node */}
-                                <div className="relative mb-8">
+                                <div className="relative mb-12">
                                     <div className="w-16 h-16 rounded-2xl bg-surface border border-foreground/10 flex items-center justify-center relative z-10 group-hover:border-primary group-hover:shadow-[0_0_30px_rgba(8,97,242,0.2)] transition-all duration-500 overflow-hidden">
                                         <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors" />
                                         <service.icon className="w-8 h-8 text-foreground group-hover:text-primary transition-colors" />
@@ -81,24 +81,18 @@ export default function ServicesPipeline() {
                                 </div>
 
                                 {/* Text Content */}
-                                <div className="space-y-3">
-                                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                                        {service.title}
-                                    </h3>
+                                <div className="space-y-6">
+                                    <div className="pb-4 relative">
+                                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-tight min-h-[3rem] flex items-end">
+                                            {service.title}
+                                        </h3>
+                                        {/* Hover Line Highlight */}
+                                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-500" />
+                                    </div>
                                     <p className="text-sm text-foreground/50 leading-relaxed font-mono">
                                         {service.desc}
                                     </p>
                                 </div>
-
-                                {/* Connecting Segment (Desktop) */}
-                                {i < services.length - 1 && (
-                                    <motion.div
-                                        className="absolute top-1/2 left-[80%] w-[40%] h-[2px] bg-gradient-to-r from-primary to-primary/0 hidden lg:block -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                        initial={{ scaleX: 0 }}
-                                        whileInView={{ scaleX: 1 }}
-                                        viewport={{ once: true }}
-                                    />
-                                )}
                             </motion.div>
                         ))}
                     </div>
