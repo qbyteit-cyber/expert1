@@ -80,7 +80,7 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                             <img
                                 src="/logo-branding.png"
                                 alt="ITIS Secure - Information Security Consulting"
-                                className="h-12 w-auto"
+                                className="h-24 w-auto"
                             />
                         </Link>
 
