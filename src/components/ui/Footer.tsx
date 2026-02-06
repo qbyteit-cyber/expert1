@@ -35,7 +35,7 @@ export default function Footer() {
                     {/* Company Info */}
                     <div>
                         <img
-                            src="/logo-branding.png"
+                            src="/Dark Blue logo.jpg"
                             alt="ITIS Secure"
                             className="h-7 w-auto mb-6"
                         />
