@@ -15,7 +15,8 @@ import {
     Code2,
     Cpu,
     Landmark,
-    Truck
+    Truck,
+    Plane
 } from "lucide-react";
 
 const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
@@ -23,6 +24,11 @@ const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
 });
 
 const segments = [
+    {
+        icon: Plane,
+        title: "Aerospace",
+        desc: "We provide specialized cybersecurity solutions for the aerospace sector, ensuring compliance with AS9100D and protecting critical avionics systems, ground control, and satellite communications."
+    },
     {
         icon: Building2,
         title: "Public Administration",
