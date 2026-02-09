@@ -34,6 +34,7 @@ const megamenuData = [
     },
     {
         title: "Outsourcing Security Roles",
+        href: "/outsourcing-security-roles",
         items: [
             { name: "Cybersecurity Architect", href: "/services#architect" },
             { name: "Cybersecurity Auditor", href: "/services#auditor" },
@@ -134,9 +135,18 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                                                     <div className="grid grid-cols-3 gap-16 relative z-10">
                                                         {megamenuData.map((category, idx) => (
                                                             <div key={idx} className="space-y-6">
-                                                                <h3 className="text-sm font-bold text-foreground/80 border-b border-foreground/5 pb-4">
-                                                                    {category.title}
-                                                                </h3>
+                                                                {category.href ? (
+                                                                    <Link
+                                                                        href={category.href}
+                                                                        className="text-sm font-bold text-foreground/80 border-b border-foreground/5 pb-4 block hover:text-primary transition-colors"
+                                                                    >
+                                                                        {category.title}
+                                                                    </Link>
+                                                                ) : (
+                                                                    <h3 className="text-sm font-bold text-foreground/80 border-b border-foreground/5 pb-4">
+                                                                        {category.title}
+                                                                    </h3>
+                                                                )}
                                                                 <ul className="space-y-3">
                                                                     {category.items.map((item, itemIdx) => (
                                                                         <li key={itemIdx}>
@@ -212,18 +222,27 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                                             {link.hasMegamenu && <ChevronDown className="w-5 h-5 opacity-40 shrink-0" />}
                                         </a>
                                         {link.hasMegamenu && (
-                                            <div className="mt-2 ml-4 flex flex-col gap-2 border-l border-foreground/10 pl-4 py-2">
-                                                {megamenuData.flatMap(cat => cat.items).slice(0, 5).map((item, i) => (
-                                                    <Link
-                                                        key={i}
-                                                        href={item.href}
-                                                        onClick={() => setIsMobileMenuOpen(false)}
-                                                        className="text-sm text-foreground/50 hover:text-primary transition-colors"
-                                                    >
-                                                        {item.name}
-                                                    </Link>
+                                            <div className="mt-2 ml-4 flex flex-col gap-4 border-l border-foreground/10 pl-4 py-2">
+                                                {megamenuData.map((category, idx) => (
+                                                    <div key={idx} className="space-y-2">
+                                                        <h4 className="text-[10px] font-mono font-bold text-primary uppercase tracking-widest opacity-60">
+                                                            {category.title}
+                                                        </h4>
+                                                        <div className="flex flex-col gap-2">
+                                                            {category.items.map((item, i) => (
+                                                                <Link
+                                                                    key={i}
+                                                                    href={item.href}
+                                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                                    className="text-sm text-foreground/50 hover:text-primary transition-colors"
+                                                                >
+                                                                    {item.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </div>
                                                 ))}
-                                                <Link href="/services" className="text-sm font-bold text-primary mt-2">View all services →</Link>
+                                                <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-bold text-primary mt-2">View all services →</Link>
                                             </div>
                                         )}
                                     </div>
