@@ -23,12 +23,12 @@ const megamenuData = [
     {
         title: "Security Management Frameworks",
         items: [
-            { name: "DORA", href: "/services#dora" },
-            { name: "NIS2 (ZKB)", href: "/services#nis2" },
             { name: "ISO 27001", href: "/services#iso" },
             { name: "TISAX", href: "/services#tisax" },
+            { name: "NIS2", href: "/services#nis2" },
+            { name: "DORA", href: "/services#dora" },
             { name: "GDPR", href: "/services#gdpr" },
-            { name: "Tpisr as9100d", href: "/services#tpisr-as9100d" },
+            { name: "TPISR", href: "/services#tpisr-as9100d" },
             { name: "Other Frameworks", href: "/services#others" },
         ],
     },
