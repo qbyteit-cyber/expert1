@@ -11,12 +11,12 @@ const stats = [
     },
     {
         icon: TrendingUp,
-        value: "98%",
+        value: "100%",
         label: "First-Time Pass Rate",
     },
     {
         icon: Users,
-        value: "100+",
+        value: "10+",
         label: "Automotive Suppliers Trusted",
     },
     {

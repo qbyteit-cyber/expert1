@@ -17,12 +17,12 @@ const features = [
     {
         icon: Users,
         title: "Trusted Partner",
-        description: "Supporting 100+ automotive suppliers and Tier-1 manufacturers across Europe with compliance excellence.",
+        description: "Supporting 10+ automotive suppliers and Tier-1 manufacturers across Europe with compliance excellence.",
     },
     {
         icon: Target,
         title: "Results-Driven",
-        description: "98% first-time pass rate on TISAX assessments through our proven methodology and hands-on guidance.",
+        description: "100% first-time pass rate on TISAX assessments through our proven methodology and hands-on guidance.",
     },
 ];
 
@@ -62,11 +62,11 @@ export default function AboutSection() {
                             <div className="text-sm text-foreground/50">Years Experience</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-display font-bold text-primary mb-1">100+</div>
+                            <div className="text-3xl font-display font-bold text-primary mb-1">10+</div>
                             <div className="text-sm text-foreground/50">Clients Served</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-display font-bold text-primary mb-1">98%</div>
+                            <div className="text-3xl font-display font-bold text-primary mb-1">100%</div>
                             <div className="text-sm text-foreground/50">Success Rate</div>
                         </div>
                     </div>
