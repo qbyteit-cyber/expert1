@@ -47,9 +47,9 @@ export default function MissionCriticalLanding({ onOpenCalculator }: MissionCrit
                         </motion.div>
 
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-foreground mb-8 tracking-tighter leading-[0.9]">
-                            <TerminalPulse text="Securing The Future Of" delay={500} /><br />
-                            <TerminalPulse text="Automotive, Cyber and" delay={2000} className="text-primary" /><br />
-                            <TerminalPulse text="Aerospace Industry" delay={3500} />
+                            <TerminalPulse text="Securing the Cyber Future of" delay={500} /><br />
+                            <TerminalPulse text="Automotive, Aerospace and" delay={2000} className="text-primary" /><br />
+                            <TerminalPulse text="Defence Industry" delay={3500} />
                         </h1>
 
                         <motion.p
