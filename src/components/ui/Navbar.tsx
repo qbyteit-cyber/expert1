@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 
 interface NavbarProps {
@@ -15,7 +16,7 @@ const megamenuData = [
         title: "How We Can Help You",
         items: [
             { name: "Implementation Support", href: "/implementation-support" },
-            { name: "Security Audits and Testing", href: "/services#audits" },
+            { name: "Security Audits and Testing", href: "/services/security-audits-and-testing" },
             { name: "Outsourcing Security Roles", href: "/outsourcing-security-roles" },
             { name: "Training and Courses", href: "/training-and-courses" },
         ],
@@ -48,6 +49,7 @@ const megamenuData = [
 ];
 
 export default function Navbar({ onOpenCalculator }: NavbarProps) {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
@@ -98,7 +100,10 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                                 >
                                     <a
                                         href={link.href}
-                                        className="text-foreground/70 hover:text-primary transition-colors text-sm font-bold flex items-center gap-1 py-4"
+                                        className={`transition-colors text-sm font-bold flex items-center gap-1 py-4 ${pathname === link.href
+                                            ? "text-primary"
+                                            : "text-foreground/70 hover:text-primary"
+                                            }`}
                                     >
                                         {link.label}
                                         {link.hasMegamenu && (
@@ -152,7 +157,10 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                                                                         <li key={itemIdx}>
                                                                             <Link
                                                                                 href={item.href}
-                                                                                className="text-sm font-medium text-foreground/60 hover:text-primary transition-all duration-300 flex items-center group"
+                                                                                className={`text-sm font-medium transition-all duration-300 flex items-center group ${pathname === item.href
+                                                                                        ? "text-primary"
+                                                                                        : "text-foreground/60 hover:text-primary"
+                                                                                    }`}
                                                                             >
                                                                                 <span className="w-1 h-1 bg-primary/0 group-hover:bg-primary rounded-full mr-0 group-hover:mr-3 transition-all duration-300 shrink-0" />
                                                                                 {item.name}
