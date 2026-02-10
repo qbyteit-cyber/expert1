@@ -26,7 +26,7 @@ const megamenuData = [
         items: [
             { name: "ISO 27001", href: "/services/iso-27001" },
             { name: "TISAX", href: "/services/tisax" },
-            { name: "NIS2", href: "/services#nis2" },
+            { name: "NIS2", href: "/services/nis2" },
             { name: "DORA", href: "/services#dora" },
             { name: "GDPR", href: "/services#gdpr" },
             { name: "TPISR", href: "/services#tpisr-as9100d" },
