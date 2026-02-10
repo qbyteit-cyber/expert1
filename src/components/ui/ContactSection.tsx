@@ -47,7 +47,7 @@ export default function ContactSection() {
                         >
                             <p className="text-sm text-foreground/40">
                                 ✓ Expert auditors with 10+ years experience<br />
-                                ✓ Trusted by 100+ automotive suppliers<br />
+                                ✓ Trusted by 10+ automotive clients<br />
                                 ✓ 98% first-time pass rate
                             </p>
                         </motion.div>

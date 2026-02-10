@@ -7,22 +7,22 @@ const features = [
     {
         icon: Shield,
         title: "Security-First Approach",
-        description: "Over a decade of experience in automotive cybersecurity and information security management systems.",
+        description: "Over 5 years of experience in automotive cybersecurity and information security management systems.",
     },
     {
         icon: Award,
         title: "Certified Expertise",
-        description: "ISO 27001 Lead Auditors and TISAX-accredited assessors with deep automotive industry knowledge.",
+        description: "ISO/IEC 27001:2022 Lead Auditors and TISAX-accredited assessors with deep automotive industry knowledge.",
     },
     {
         icon: Users,
         title: "Trusted Partner",
-        description: "Supporting 10+ automotive suppliers and Tier-1 manufacturers across Europe with compliance excellence.",
+        description: "Supporting 10+ automotive clients and Tier-1 manufacturers across Europe with compliance excellence.",
     },
     {
         icon: Target,
         title: "Results-Driven",
-        description: "100% first-time pass rate on TISAX assessments through our proven methodology and hands-on guidance.",
+        description: "98% first-time pass rate on TISAX assessments through our proven methodology and hands-on guidance.",
     },
 ];
 
@@ -52,13 +52,13 @@ export default function AboutSection() {
                     </p>
 
                     <p className="text-foreground/60 leading-relaxed mb-8">
-                        Founded by former automotive security engineers and compliance officers, we understand the unique challenges of protecting sensitive data in the automotive supply chain. Our mission is to make world-class security audits accessible, efficient, and results-oriented.
+                        Founded by Iulian Bozdoghina, an expert auditor with decades of frontline technical experience, we understand the unique challenges of protecting sensitive data in the automotive supply chain. Our mission is to make world-class security audits accessible, efficient, and results-oriented.
                     </p>
 
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-6">
                         <div>
-                            <div className="text-3xl font-display font-bold text-primary mb-1">10+</div>
+                            <div className="text-3xl font-display font-bold text-primary mb-1">5+</div>
                             <div className="text-sm text-foreground/50">Years Experience</div>
                         </div>
                         <div>
@@ -66,8 +66,8 @@ export default function AboutSection() {
                             <div className="text-sm text-foreground/50">Clients Served</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-display font-bold text-primary mb-1">100%</div>
-                            <div className="text-sm text-foreground/50">Success Rate</div>
+                            <div className="text-3xl font-display font-bold text-primary mb-1">98%</div>
+                            <div className="text-sm text-foreground/50">Pass Rate</div>
                         </div>
                     </div>
                 </motion.div>

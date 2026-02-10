@@ -5,9 +5,9 @@ import { Check, X, ShieldAlert, ShieldCheck } from "lucide-react";
 
 const rows = [
     { metric: "TISAX® Readiness", before: "Unmapped Gaps", after: "Audit Ready AL3", status: "optimized" },
-    { metric: "Data Sovereignty", before: "Fragmented", after: "Unified Protection", status: "optimized" },
-    { metric: "Incident Response", before: "> 24 hrs", after: "< 15 mins", status: "optimized" },
-    { metric: "Supplier Trust", before: "Transactional", after: "Strategic Tier-1", status: "optimized" },
+    { metric: "VDA ISA Maturity", before: "Level 0-1", after: "Level 3+ (Established)", status: "optimized" },
+    { metric: "Audit Findings", before: "Major NCs", after: "Zero Major NCs", status: "optimized" },
+    { metric: "Procurement Due Diligence", before: "High Risk", after: "Approved Vendor", status: "optimized" },
 ];
 
 export function SuccessMatrix() {

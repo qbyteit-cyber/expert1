@@ -7,10 +7,11 @@ import ContactSection from "@/components/ui/ContactSection";
 import AboutSection from "@/components/ui/AboutSection";
 import Footer from "@/components/ui/Footer";
 import ReadinessCalculator from "@/components/ui/ReadinessCalculator";
-
 import MissionCriticalLanding from "@/components/ui/MissionCriticalLanding";
 import Navbar from "@/components/ui/Navbar";
 import ServicesPipeline from "@/components/ui/ServicesPipeline";
+import BrandLogoStrip from "@/components/ui/BrandLogoStrip";
+import WhyITISSecure from "@/components/ui/WhyITISSecure";
 
 const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
   ssr: false,
@@ -31,6 +32,10 @@ export default function Home() {
 
         <MissionCriticalLanding onOpenCalculator={() => setCalculatorOpen(true)} />
 
+        <BrandLogoStrip />
+
+        <WhyITISSecure />
+
         <div id="services">
           <ServicesPipeline />
         </div>
@@ -42,7 +47,6 @@ export default function Home() {
         <div id="contact">
           <ContactSection />
         </div>
-
 
         <Footer onOpenCalculator={() => setCalculatorOpen(true)} />
       </div>
