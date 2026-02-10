@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import {
@@ -198,8 +198,8 @@ export default function ISO27001Page() {
                                     key={stage.id}
                                     onClick={() => setActiveStage(index)}
                                     className={`relative p-8 rounded-xl border transition-all duration-300 text-left group overflow-hidden ${activeStage === index
-                                            ? "bg-foreground/5 border-primary shadow-2xl scale-[1.02] z-20"
-                                            : "bg-transparent border-foreground/10 hover:border-foreground/20 opacity-60 z-10"
+                                        ? "bg-foreground/5 border-primary shadow-2xl scale-[1.02] z-20"
+                                        : "bg-transparent border-foreground/10 hover:border-foreground/20 opacity-60 z-10"
                                         }`}
                                 >
                                     <div className={`mb-4 transition-transform duration-300 ${activeStage === index ? 'scale-110' : ''}`}>
