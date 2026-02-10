@@ -17,7 +17,7 @@ import {
     Activity,
     Database,
     ArrowRightLeft,
-    Layout
+    LayoutDashboard
 } from "lucide-react";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
@@ -416,7 +416,7 @@ export default function ISO27001Page() {
                                 <ul className="space-y-6">
                                     <li className="flex gap-4 items-center">
                                         <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                                            <Layout className="w-5 h-5 text-primary" />
+                                            <LayoutDashboard className="w-5 h-5 text-primary" />
                                         </div>
                                         <span className="font-mono font-bold text-foreground">Centralized Document Control (DMS)</span>
                                     </li>
