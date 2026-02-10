@@ -17,7 +17,7 @@ const megamenuData = [
         items: [
             { name: "Implementation Support", href: "/implementation-support" },
             { name: "Security Audits and Testing", href: "/services/security-audits-and-testing" },
-            { name: "Outsourcing Security Roles", href: "/outsourcing-security-roles" },
+            { name: "Outsourcing Security Roles", href: "/services/outsourcing-security-roles" },
             { name: "Training and Courses", href: "/training-and-courses" },
         ],
     },
@@ -158,8 +158,8 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                                                                             <Link
                                                                                 href={item.href}
                                                                                 className={`text-sm font-medium transition-all duration-300 flex items-center group ${pathname === item.href
-                                                                                        ? "text-primary"
-                                                                                        : "text-foreground/60 hover:text-primary"
+                                                                                    ? "text-primary"
+                                                                                    : "text-foreground/60 hover:text-primary"
                                                                                     }`}
                                                                             >
                                                                                 <span className="w-1 h-1 bg-primary/0 group-hover:bg-primary rounded-full mr-0 group-hover:mr-3 transition-all duration-300 shrink-0" />
