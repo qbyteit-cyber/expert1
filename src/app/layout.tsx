@@ -89,7 +89,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${ibmPlexSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${ibmPlexSans.variable} dark`} style={{ colorScheme: 'dark' }}>
       <head>
         <script
           type="application/ld+json"

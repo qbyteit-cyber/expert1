@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: dark;
   /* Common Brand Colors */
   --color-primary: #0861F2;
   --color-secondary: #C9A063;
