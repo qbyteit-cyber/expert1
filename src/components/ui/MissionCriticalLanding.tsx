@@ -6,6 +6,7 @@ import { CompliancePulse } from "./CompliancePulse";
 import { TechnicalCounter } from "./TechnicalCounter";
 import LogoMarquee from "./LogoMarquee";
 import { Shield, Lock, Activity, Cpu, ChevronRight } from "lucide-react";
+import { LandingHeroTitle } from "./LandingHeroTitle";
 
 interface MissionCriticalLandingProps {
     onOpenCalculator?: () => void;
@@ -46,11 +47,7 @@ export default function MissionCriticalLanding({ onOpenCalculator }: MissionCrit
                             </span>
                         </motion.div>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-foreground mb-8 tracking-tighter leading-[0.9]">
-                            <TerminalPulse text="Securing the Cyber Future of" delay={500} /><br />
-                            <TerminalPulse text="Automotive, Aerospace and" delay={2000} className="text-primary" /><br />
-                            <TerminalPulse text="Defence Industry" delay={3500} />
-                        </h1>
+                        <LandingHeroTitle />
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
