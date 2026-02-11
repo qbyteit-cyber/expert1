@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Zap, Lock, Database, Search } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import { LandingHeroTitle } from "./LandingHeroTitle";
 import dynamic from "next/dynamic";
 
@@ -28,42 +28,7 @@ export default function MissionCriticalLanding({ onOpenCalculator }: MissionCrit
 
             <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col items-center text-center">
 
-                {/* Technical Meta Data Bar */}
-                <div className="absolute top-0 left-0 w-full flex justify-between px-8 py-4 opacity-40 font-mono text-[10px] hidden lg:flex pointer-events-none">
-                    <div className="flex gap-8">
-                        <div className="flex items-center gap-2">
-                            <Database className="w-3 h-3" />
-                            <span>NODE_ALPHA: ACTIVE</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Lock className="w-3 h-3" />
-                            <span>AES_256: VALIDATED</span>
-                        </div>
-                    </div>
-                    <div className="flex gap-8">
-                        <div className="flex items-center gap-2">
-                            <Search className="w-3 h-3" />
-                            <span>SCANNING_NETWORK...</span>
-                        </div>
-                        <span>SEC_PROTOCOL: V5.0</span>
-                    </div>
-                </div>
-
-                {/* Status Bar */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex items-center gap-4 px-4 py-2 bg-foreground/5 backdrop-blur-md border border-foreground/10 rounded-full mb-12 shadow-inner"
-                >
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                        <span className="text-[10px] font-mono font-bold text-foreground/60 uppercase tracking-widest">System Status: PROVISIONED</span>
-                    </div>
-                    <div className="w-px h-3 bg-foreground/20" />
-                    <div className="text-[10px] font-mono font-bold text-primary uppercase tracking-widest leading-none">
-                        VDA Excellence: Level 3+
-                    </div>
-                </motion.div>
+                {/* Content starts below removed bars */}
 
                 {/* Badge/Small Title */}
                 <motion.div
