@@ -76,9 +76,9 @@ export default function Navbar({ onOpenCalculator }: NavbarProps) {
                 initial={{ y: 0 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+                className="fixed top-0 left-0 right-0 z-50"
             >
-                <div className="max-w-7xl mx-auto bg-foreground/5 backdrop-blur-md rounded-2xl px-6 py-2 border border-foreground/10 shadow-lg transition-all duration-300">
+                <div className="w-full bg-background/50 backdrop-blur-md border-b border-foreground/10 px-6 py-4 md:px-12 shadow-lg transition-all duration-300">
 
                     <div className="flex items-center justify-between">
                         {/* Logo */}
