@@ -75,7 +75,7 @@ const industriesPart2 = [
         title: "Finance",
         headline: "Banking-Grade Security for Global Finance.",
         desc: "We protect banks, insurers, and fintech companies against cyber threats, fraud, and data breaches. We provide security monitoring, fraud prevention, and regulatory compliance including PCI DSS and DORA.",
-        image: "https://images.unsplash.com/photo-1550565118-3d1428df7301?q=80&w=1200&auto=format&fit=crop"
+        image: "/finance-industry.png"
     },
     {
         icon: Zap,
