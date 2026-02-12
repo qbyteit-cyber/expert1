@@ -29,7 +29,7 @@ const industries = [
         icon: Car,
         title: "Automotive Industry",
         headline: "Securing the Future of Connected Mobility.",
-        desc: "We ensure the security of automotive systems, protect intellectual property, and support manufacturers and suppliers in achieving cyber resilience across the supply chain. From TISAX compliance to vehicle-to-everything (V2X) security.",
+        desc: "We ensure the security of automotive systems, protect intellectual property, support manufacturers and their suppliers in achieving cyber resilience across the supply chain. We also secure the IT systems of transport companies and logistics against cyber threats, by protecting intelligent transport layers and control centers.",
         image: "/Automotive-Industry.png"
     },
     {
