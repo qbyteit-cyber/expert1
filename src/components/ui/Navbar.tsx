@@ -16,9 +16,9 @@ const megamenuData = [
         title: "How We Can Help You",
         items: [
             { name: "Implementation Support", href: "/implementation-support" },
+            { name: "Training and Courses", href: "/services/training-and-courses" },
             { name: "Security Audits and Testing", href: "/services/security-audits-and-testing" },
             { name: "Outsourced Roles", href: "/services/outsourced-roles" },
-            { name: "Training and Courses", href: "/services/training-and-courses" },
         ],
     },
     {
