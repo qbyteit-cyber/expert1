@@ -190,35 +190,91 @@ function ShowcaseSection({ data, title, description, onOpenCalculator }: Showcas
     );
 }
 
+const heroSlides = [
+    { title: "Automotive", image: "/Automotive-Industry.png" },
+    { title: "Aerospace", image: "/Aerospace&Defence.png" },
+    { title: "Defence", image: "/Aerospace&Defence.png" }
+];
+
 export default function MarketSegments() {
     const [calculatorOpen, setCalculatorOpen] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <main className="min-h-screen relative overflow-x-hidden bg-background text-foreground">
-            {/* 3D Background */}
-            <div className="fixed inset-0 z-0 opacity-40 dark:opacity-20 pointer-events-none">
-                <SecurityMesh />
-            </div>
-
             <div className="relative z-10">
                 <Navbar onOpenCalculator={() => setCalculatorOpen(true)} />
 
                 {/* Hero Section */}
-                <section className="px-8 pt-60 pb-32">
+                <section className="px-8 pt-64 pb-32">
                     <div className="max-w-7xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="max-w-3xl"
-                        >
-                            <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter mb-8 leading-none">
-                                Market <br />
-                                <span className="text-primary italic">Industries.</span>
-                            </h1>
-                            <p className="text-xl text-foreground/60 leading-relaxed">
-                                We help organizations across various industries protect their data, systems, and infrastructure from evolving cyber threats with tailored security strategies.
-                            </p>
-                        </motion.div>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="max-w-2xl"
+                            >
+                                <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter mb-8 leading-[0.9]">
+                                    Market <br />
+                                    <AnimatePresence mode="wait">
+                                        <motion.span
+                                            key={activeSlide}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            className="text-primary italic block"
+                                        >
+                                            {heroSlides[activeSlide].title}.
+                                        </motion.span>
+                                    </AnimatePresence>
+                                </h1>
+                                <p className="text-2xl text-foreground font-medium mb-6 leading-snug">
+                                    Direct technical authority for TISAX®, Aerospace and Defence security assessments.
+                                </p>
+                                <p className="text-lg text-foreground/60 leading-relaxed">
+                                    We don't speak marketing. We create audit-proof high-integrity ecosystems, that scale with your business.
+                                </p>
+                            </motion.div>
+
+                            {/* Hero Carousel */}
+                            <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border border-foreground/5 bg-foreground/5 hidden lg:block">
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={activeSlide}
+                                        initial={{ opacity: 0, scale: 1.1 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.8 }}
+                                        className="absolute inset-0"
+                                    >
+                                        <img
+                                            src={heroSlides[activeSlide].image}
+                                            alt={heroSlides[activeSlide].title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent" />
+                                    </motion.div>
+                                </AnimatePresence>
+
+                                {/* Carousel Indicators */}
+                                <div className="absolute bottom-8 left-8 flex gap-2">
+                                    {heroSlides.map((_, idx) => (
+                                        <div
+                                            key={idx}
+                                            className={`h-1.5 rounded-full transition-all duration-500 ${activeSlide === idx ? "w-8 bg-primary" : "w-1.5 bg-white/30"
+                                                }`}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
