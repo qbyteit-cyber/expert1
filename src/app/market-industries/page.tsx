@@ -37,56 +37,56 @@ const industries = [
         title: "Aerospace & Defence",
         headline: "Mission-Critical Protection for Aerospace & Defence.",
         desc: "We provide specialized cybersecurity solutions for the aerospace and defence sectors, ensuring compliance with AS9100D and protecting critical avionics systems, ground control, and satellite communications. Our frameworks meet the highest military and civil aviation requirements.",
-        image: "https://images.unsplash.com/photo-1564613271113-1d07bc3ae972?q=80&w=1200&auto=format&fit=crop"
+        image: "/Aerospace&Defence.png"
     },
     {
         icon: Building2,
         title: "Public Administration",
         headline: "Safeguarding Citizens' Data and Government Infrastructure.",
         desc: "We protect sensitive data and critical information systems of public administration against cyberattacks and unauthorized access. We assist with compliance with legislative and security standards, ensuring public trust in digital governance.",
-        image: "https://images.unsplash.com/photo-1517091314147-380d51027c49?q=80&w=1200&auto=format&fit=crop"
+        image: "/smart-city-operations.png"
     },
     {
         icon: Landmark,
         title: "Public Infrastructure",
         headline: "Resilient Security for Smart Cities and Public Utilities.",
         desc: "We safeguard critical infrastructure and public utilities from cyber threats that could disrupt essential services. Our focus includes securing smart city systems, public networks, and transportation hubs against hybrid threats.",
-        image: "https://images.unsplash.com/photo-1449156003053-96421817dea9?q=80&w=1200&auto=format&fit=crop"
+        image: "/public-infrastructure.png"
     },
     {
         icon: Factory,
         title: "Manufacturing",
         headline: "Industrial Security for the Era of Industry 4.0.",
         desc: "We minimize the risk of cyberattacks on production lines and industrial systems. We help secure IoT and OT environments to ensure smooth manufacturing operations while bridging the gap between IT and OT security departments.",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
+        image: "/manufacturing-industry.png"
     },
     {
         icon: Stethoscope,
         title: "Healthcare",
         headline: "Patient-First Cybersecurity for Modern Healthcare.",
         desc: "We protect healthcare facilities and patient data from breaches and cyberattacks. We assist with securing healthcare systems and ensuring compliance with regulations such as GDPR and HIPAA, focusing on non-disruptive security measures.",
-        image: "https://images.unsplash.com/photo-1519494140681-891cc9379011?q=80&w=1200&auto=format&fit=crop"
+        image: "/health-industry.png"
     },
     {
         icon: Zap,
         title: "Energy",
         headline: "Protecting the Backbone of Global Energy Supplies.",
         desc: "We safeguard critical infrastructure from cyber threats that could disrupt energy supply. Our focus includes securing control systems (SCADA/ICS) and ensuring resilience against state-sponsored actors and ransomware.",
-        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop"
+        image: "/energy-industry.png"
     },
     {
         icon: Cpu,
         title: "Technology Companies",
         headline: "Enterprise-Grade Security for Scalable Tech Ecosystems.",
         desc: "We secure cloud services, IT infrastructure, and intellectual property. We provide protection against DDoS attacks, ransomware, and other threats, allowing tech leaders to focus on innovation and growth.",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+        image: "/technology-companies-secure-datacenter.png"
     },
     {
         icon: Code2,
         title: "Software House",
         headline: "Secure by Design: DevSecOps and Application Hardening.",
         desc: "We help developers secure applications from design to deployment. We perform penetration tests, code reviews, and implement secure DevOps practices to ensure that security is an enabler, not a bottleneck.",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+        image: "/software-industry.png"
     }
 ];
 
