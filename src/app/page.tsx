@@ -13,19 +13,12 @@ import ServicesPipeline from "@/components/ui/ServicesPipeline";
 import BrandLogoStrip from "@/components/ui/BrandLogoStrip";
 import WhyITISSecure from "@/components/ui/WhyITISSecure";
 
-const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
-  ssr: false,
-});
 
 export default function Home() {
   const [calculatorOpen, setCalculatorOpen] = useState(false);
 
   return (
     <main id="main-content" className="min-h-screen relative overflow-x-hidden bg-background text-foreground">
-      {/* 3D Background - Dynamic Theming */}
-      <div className="fixed inset-0 z-0 opacity-40 dark:opacity-20 pointer-events-none">
-        <SecurityMesh />
-      </div>
 
       <div className="relative z-10">
         <Navbar onOpenCalculator={() => setCalculatorOpen(true)} />
