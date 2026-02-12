@@ -170,7 +170,7 @@ export default function MarketSegments() {
                                             alt={industries[activeTab].title}
                                             className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
                                         />
-                                        <div className="absolute bottom-10 left-10">
+                                        <div className="absolute bottom-10 right-10">
                                             <div className="flex items-center gap-4 text-white">
                                                 <div className="p-3 bg-primary/20 backdrop-blur-xl rounded-xl border border-white/10">
                                                     {(() => {
