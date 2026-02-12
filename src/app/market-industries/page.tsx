@@ -151,7 +151,7 @@ function ShowcaseSection({ data, title, description, onOpenCalculator }: Showcas
                             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                         >
                             {/* Left: Image */}
-                            <div className="relative group rounded-[2rem] overflow-hidden aspect-[4/3] shadow-2xl border border-foreground/5 bg-foreground/5">
+                            <div className="relative group rounded-[2rem] overflow-hidden aspect-[3/2] shadow-2xl border border-foreground/5 bg-foreground/5">
                                 <img
                                     src={data[activeTab].image}
                                     alt={data[activeTab].title}
