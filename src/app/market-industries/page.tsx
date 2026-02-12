@@ -170,17 +170,6 @@ export default function MarketSegments() {
                                             alt={industries[activeTab].title}
                                             className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
                                         />
-                                        <div className="absolute bottom-10 right-10">
-                                            <div className="flex items-center gap-4 text-white">
-                                                <div className="p-3 bg-primary/20 backdrop-blur-xl rounded-xl border border-white/10">
-                                                    {(() => {
-                                                        const Icon = industries[activeTab].icon;
-                                                        return <Icon className="w-8 h-8 text-primary" />;
-                                                    })()}
-                                                </div>
-                                                <span className="font-mono font-bold tracking-[0.2em] text-xs uppercase opacity-80">Premium Protection</span>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     {/* Right: Content */}
