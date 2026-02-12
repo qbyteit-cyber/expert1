@@ -23,11 +23,16 @@ const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
     ssr: false,
 });
 
-const segments = [
+const industries = [
+    {
+        icon: Car,
+        title: "Automotive Industry",
+        desc: "We ensure the security of automotive systems, protect intellectual property, and support manufacturers and suppliers in achieving cyber resilience across the supply chain."
+    },
     {
         icon: Plane,
-        title: "Aerospace",
-        desc: "We provide specialized cybersecurity solutions for the aerospace sector, ensuring compliance with AS9100D and protecting critical avionics systems, ground control, and satellite communications."
+        title: "Aerospace & Defence",
+        desc: "We provide specialized cybersecurity solutions for the aerospace and defence sectors, ensuring compliance with AS9100D and protecting critical avionics systems, ground control, and satellite communications."
     },
     {
         icon: Building2,
@@ -35,9 +40,9 @@ const segments = [
         desc: "We protect sensitive data and critical information systems of public administration against cyberattacks and unauthorized access. We assist with compliance with legislative and security standards."
     },
     {
-        icon: Zap,
-        title: "Energy",
-        desc: "We safeguard critical infrastructure from cyber threats that could disrupt energy supply. Our focus includes securing control systems (SCADA/ICS) and ensuring resilience against attacks."
+        icon: Landmark, // Reusing icon for infrastructure if Truck isn't perfect, but Landmark fits Public Infrastructure well or keep Landmark for Public Admin? Let's use Landmark for Infrastructure or Building2.
+        title: "Public Infrastructure",
+        desc: "We safeguard critical infrastructure and public utilities from cyber threats that could disrupt essential services. Our focus includes securing smart city systems and public networks."
     },
     {
         icon: Factory,
@@ -45,19 +50,14 @@ const segments = [
         desc: "We minimize the risk of cyberattacks on production lines and industrial systems. We help secure IoT and OT environments to ensure smooth manufacturing operations."
     },
     {
-        icon: Car,
-        title: "Automotive Industry",
-        desc: "We ensure the security of automotive systems, protect intellectual property, and support manufacturers and suppliers in achieving cyber resilience across the supply chain."
-    },
-    {
         icon: Stethoscope,
         title: "Healthcare",
         desc: "We protect healthcare facilities and patient data from breaches and cyberattacks. We assist with securing healthcare systems and ensuring compliance with regulations such as GDPR."
     },
     {
-        icon: Code2,
-        title: "Software House",
-        desc: "We help developers secure applications from design to deployment. We perform penetration tests, code reviews, and implement secure DevOps practices."
+        icon: Zap,
+        title: "Energy",
+        desc: "We safeguard critical infrastructure from cyber threats that could disrupt energy supply. Our focus includes securing control systems (SCADA/ICS) and ensuring resilience against attacks."
     },
     {
         icon: Cpu,
@@ -65,14 +65,9 @@ const segments = [
         desc: "We secure cloud services, IT infrastructure, and intellectual property. We provide protection against DDoS attacks, ransomware, and other threats."
     },
     {
-        icon: Landmark,
-        title: "Financial Sector",
-        desc: "We protect banks, insurers, and fintech companies against cyber threats, fraud, and data breaches. We provide security monitoring, fraud prevention, and regulatory compliance."
-    },
-    {
-        icon: Truck,
-        title: "Transport",
-        desc: "We secure the IT systems of transport companies, the aviation industry, and logistics against cyber threats. We help protect intelligent transport systems and control centers."
+        icon: Code2,
+        title: "Software House",
+        desc: "We help developers secure applications from design to deployment. We perform penetration tests, code reviews, and implement secure DevOps practices."
     }
 ];
 
@@ -97,14 +92,9 @@ export default function MarketSegments() {
                             animate={{ opacity: 1, y: 0 }}
                             className="max-w-3xl"
                         >
-                            <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-8">
-                                <span className="text-sm font-mono text-primary uppercase tracking-[0.3em]">
-                                    Industry Vertical Expertise
-                                </span>
-                            </div>
                             <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter mb-8 leading-none">
                                 Market <br />
-                                <span className="text-primary italic">Segments.</span>
+                                <span className="text-primary italic">Industries.</span>
                             </h1>
                             <p className="text-xl text-foreground/60 leading-relaxed">
                                 We help organizations across various industries protect their data, systems, and infrastructure from evolving cyber threats with tailored security strategies.
@@ -117,7 +107,7 @@ export default function MarketSegments() {
                 <section className="py-24 px-8 bg-foreground/[0.02]">
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {segments.map((s, i) => (
+                            {industries.map((s, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
