@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 
-const industriesPart1 = [
+const industries = [
     {
         icon: Car,
         title: "Automotive Industry",
@@ -62,10 +62,7 @@ const industriesPart1 = [
         headline: "Enterprise-Grade Security for Scalable Tech Ecosystems.",
         desc: "We secure cloud services, IT infrastructure, and intellectual property. We provide protection against DDoS attacks, ransomware, and other threats, allowing tech leaders to focus on innovation and growth.",
         image: "/technology-companies-secure-datacenter.png"
-    }
-];
-
-const industriesPart2 = [
+    },
     {
         icon: Landmark,
         title: "Finance",
@@ -115,8 +112,8 @@ function ShowcaseSection({ data, title, description, onOpenCalculator }: Showcas
                 </div>
 
                 {/* Tab Navigation */}
-                <div className="flex justify-center mb-16">
-                    <div className="inline-flex flex-wrap justify-center gap-2 p-1 bg-surface border border-foreground/5 rounded-2xl shadow-xl">
+                <div className="flex justify-center mb-16 overflow-x-auto pb-4 scrollbar-hide">
+                    <div className="inline-flex flex-nowrap justify-center gap-2 p-1 bg-surface border border-foreground/5 rounded-2xl shadow-xl min-w-max">
                         {data.map((ind, idx) => (
                             <button
                                 key={idx}
@@ -196,16 +193,9 @@ export default function MarketSegments() {
 
 
                 <ShowcaseSection
-                    data={industriesPart1}
+                    data={industries}
                     title="Cybersecurity for Critical Industries"
                     description="Our specialized compliance and auditing services are tailored to the unique regulatory requirements of each sector."
-                    onOpenCalculator={() => setCalculatorOpen(true)}
-                />
-
-                <ShowcaseSection
-                    data={industriesPart2}
-                    title="Specialized Market Sectors"
-                    description="We provide elite security frameworks and auditing for highly regulated and dynamic specialized industries."
                     onOpenCalculator={() => setCalculatorOpen(true)}
                 />
 
