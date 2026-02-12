@@ -20,9 +20,6 @@ import {
     ArrowRight
 } from "lucide-react";
 
-const SecurityMesh = dynamic(() => import("@/components/canvas/SecurityMesh"), {
-    ssr: false,
-});
 
 const industriesPart1 = [
     {
