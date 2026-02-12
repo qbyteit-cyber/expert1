@@ -168,9 +168,8 @@ export default function MarketSegments() {
                                         <img
                                             src={industries[activeTab].image}
                                             alt={industries[activeTab].title}
-                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                                            className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
                                         <div className="absolute bottom-10 left-10">
                                             <div className="flex items-center gap-4 text-white">
                                                 <div className="p-3 bg-primary/20 backdrop-blur-xl rounded-xl border border-white/10">
